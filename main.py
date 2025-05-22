@@ -859,11 +859,9 @@ class ReportGenerator:
         filtered_stats = [stat for stat in stats if stat["count"] > 0]
         for i, stat in enumerate(filtered_stats):
             # word = stat["word"]
-            # count = stat["count"]
+            count = stat["count"]
 
-            # text_content += f"【{word}】 : {count} 条\n"
-            
-            text_content = ""
+            text_content += f"关键字共匹配到 {count} 条\n"
             # 添加相关标题
             for j, title in enumerate(stat["titles"], 1):
                 text_content += f"{j}. {title}\n"
