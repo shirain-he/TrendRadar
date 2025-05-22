@@ -858,11 +858,12 @@ class ReportGenerator:
         # 添加频率词统计信息
         filtered_stats = [stat for stat in stats if stat["count"] > 0]
         for i, stat in enumerate(filtered_stats):
-            word = stat["word"]
-            count = stat["count"]
+            # word = stat["word"]
+            # count = stat["count"]
 
-            text_content += f"【{word}】 : {count} 条\n"
-
+            # text_content += f"【{word}】 : {count} 条\n"
+            
+            text_content = ""
             # 添加相关标题
             for j, title in enumerate(stat["titles"], 1):
                 text_content += f"{j}. {title}\n"
